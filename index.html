@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#100b20">
+  <meta name="description" content="یک سفر کوچک به دنیای جادویی دختران؛ روز دختر مبارک.">
+  <title>دخترِ ماه | ساخته‌شده توسط Sirous</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <audio id="siteMusic" src="rozet-mobarak.mp3" preload="metadata" loop></audio>
+  <div class="site-noise" aria-hidden="true"></div>
+  <div class="sky" aria-hidden="true">
+    <div class="moon"><span></span></div>
+    <div class="moon-glow"></div>
+    <div class="star-field" id="starField"></div>
+    <div class="shooting-star shooting-star-one"></div>
+    <div class="shooting-star shooting-star-two"></div>
+    <div class="cloud cloud-one"></div>
+    <div class="cloud cloud-two"></div>
+  </div>
+
+  <header class="topbar">
+    <a class="brand" href="#home" id="brandHome" aria-label="دختر ماه، صفحه اول">
+      <span class="brand-mark">✦</span>
+      <span>دخترِ ماه</span>
+    </a>
+    <div class="topbar-side">
+      <span class="topbar-caption">یک قصه برای تمام دخترهای دنیا</span>
+      <button class="sound-toggle" id="soundToggle" type="button" aria-pressed="false" title="پخش یا توقف آهنگ روزت مبارک">
+        <span class="sound-icon">♫</span><span id="soundLabel">پخش آهنگ</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="storyPages">
+    <section class="story-page active" data-page="0" id="page-home" aria-label="صفحه اول">
+    <section class="hero section-shell" id="home">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="eyebrow-line"></span> یک روز، هزاران ستاره <span class="eyebrow-line"></span></div>
+        <h1>دخترِ <span class="title-highlight">ماه</span><span class="title-star">✧</span></h1>
+        <p class="hero-lead">برای تمام دخترهایی که دنیا را<br class="desktop-break"> با حضورشان روشن‌تر می‌کنند.</p>
+        <p class="hero-description">امشب، آسمان قصه‌ای برای تو دارد؛ قصه‌ای از رویاها، شجاعت، مهربانی و نوری که در وجودت هست.</p>
+        <button class="primary-button" id="enterGarden" type="button">
+          <span>ورود به دنیای جادو</span><span class="button-arrow">←</span>
+        </button>
+        <div class="hero-note"><span class="tiny-sparkle">✦</span> این قصه، برای توست؛ درست همان‌طور که هستی.</div>
+      </div>
+
+      <div class="hero-art reveal" aria-label="تصویرسازی باغ جادویی زیر نور ماه">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="art-halo"></div>
+        <div class="glass-card card-top"><span class="card-icon">✧</span><span>رویاهایت را جدی بگیر</span></div>
+        <div class="moon-gate">
+          <div class="gate-arch"></div>
+          <div class="gate-inner"></div>
+          <div class="gate-path"></div>
+          <div class="gate-light"></div>
+        </div>
+        <div class="floating-petal petal-a">✿</div>
+        <div class="floating-petal petal-b">✧</div>
+        <div class="floating-petal petal-c">✦</div>
+        <div class="glass-card card-bottom"><span class="card-dot"></span><span>تو، بخشی از جادوی جهانی</span></div>
+        <div class="flower flower-one"><i></i><i></i><i></i><i></i><i></i><b></b></div>
+        <div class="flower flower-two"><i></i><i></i><i></i><i></i><i></i><b></b></div>
+        <div class="flower flower-three"><i></i><i></i><i></i><i></i><i></i><b></b></div>
+      </div>
+    </section>
+    <div class="page-navigation">
+      <span class="page-counter">صفحهٔ ۱ از ۳</span>
+      <button class="page-next primary-button" type="button" data-go="1">صفحهٔ بعد <span class="button-arrow">←</span></button>
+    </div>
+    </section>
+
+    <section class="story-page" data-page="1" id="page-garden" aria-label="صفحه دوم" hidden>
+    <section class="message-section section-shell" id="garden">
+      <div class="section-heading reveal">
+        <span class="section-kicker">نامه‌ای از دل آسمان</span>
+        <h2>به تو، <span>دخترِ دوست‌داشتنیِ دنیا</span></h2>
+        <div class="heading-flourish">✧ ───── ✦ ───── ✧</div>
+      </div>
+
+      <article class="letter-card reveal">
+        <div class="letter-corner corner-tl">✧</div><div class="letter-corner corner-tr">✧</div>
+        <div class="letter-emblem">✿</div>
+        <p class="letter-opening">روز دختر مبارک! 🌷</p>
+        <p>یادت باشد که برای درخشیدن، لازم نیست شبیه هیچ ستاره‌ای باشی. آسمان به هر ستاره جایی داده تا با نور خودش بدرخشد؛ و دنیا هم به حضور منحصربه‌فرد تو نیاز دارد.</p>
+        <p>تو می‌توانی هم مهربان باشی و هم قوی، هم خسته شوی و هم دوباره شروع کنی، هم رویاهای بزرگ داشته باشی و هم قدم‌های کوچک برداری. ارزش تو به تأیید دیگران یا کامل بودن نیست؛ تو همین حالا هم شایسته‌ی احترام، آرامش و فرصت‌های قشنگی.</p>
+        <p>امیدوارم همیشه جرئتِ انتخاب مسیر خودت را داشته باشی، صدایت شنیده شود، آرزوهایت جدی گرفته شوند و در روزهای سخت، با خودت همان‌قدر مهربان باشی که با دیگرانی.</p>
+        <div class="letter-signoff">با آرزوی روشن‌ترین روزها برای تو <span>✦</span></div>
+        <div class="letter-corner corner-bl">✧</div><div class="letter-corner corner-br">✧</div>
+      </article>
+
+      <div class="wish-grid">
+        <div class="wish-card reveal"><span class="wish-symbol">☾</span><h3>برای رویاهایت</h3><p>آسمانت را کوچک نکن؛ حتی دورترین ستاره‌ها هم ارزش دنبال کردن دارند.</p></div>
+        <div class="wish-card reveal"><span class="wish-symbol">✿</span><h3>برای قلب مهربانت</h3><p>مهربانی‌ات را حفظ کن، اما خودت را هم در میان مراقبت از دیگران فراموش نکن.</p></div>
+        <div class="wish-card reveal"><span class="wish-symbol">✦</span><h3>برای آینده‌ات</h3><p>امیدوارم راه‌هایی پیش رویت باز شوند که امروز حتی تصورشان را هم نمی‌کنی.</p></div>
+      </div>
+    </section>
+    <div class="page-navigation">
+      <button class="page-prev secondary-button" type="button" data-go="0">→ صفحهٔ قبل</button>
+      <span class="page-counter">صفحهٔ ۲ از ۳</span>
+      <button class="page-next primary-button" type="button" data-go="2">صفحهٔ بعد <span class="button-arrow">←</span></button>
+    </div>
+    </section>
+
+    <section class="story-page" data-page="2" id="page-gift" aria-label="صفحه سوم" hidden>
+    <section class="gift-section section-shell" id="gift">
+      <div class="gift-stars" aria-hidden="true">✦　·　✧　·　✦　·　✧</div>
+      <div class="section-heading reveal">
+        <span class="section-kicker">یک یادگاری کوچک</span>
+        <h2>هدیه‌ای از <span>باغ ماه</span></h2>
+        <p class="section-subtitle">روی جعبه بزن و آرزویت را از دل این باغ بردار.</p>
+      </div>
+      <button class="gift-button reveal" id="openGift" type="button" aria-label="باز کردن جعبه هدیه">
+        <span class="gift-aura"></span>
+        <span class="gift-box">
+          <span class="gift-lid"></span><span class="gift-body"></span>
+          <span class="gift-ribbon-v"></span><span class="gift-ribbon-h"></span>
+          <span class="gift-bow bow-left"></span><span class="gift-bow bow-right"></span>
+        </span>
+        <span class="gift-label" id="giftLabel">لمس کن تا هدیه باز شود</span>
+      </button>
+      <div class="gift-reveal" id="giftReveal" aria-live="polite" hidden>
+        <div class="bouquet" aria-hidden="true"><span>✿</span><span>❀</span><span>✿</span><span>❁</span><span>✿</span><i></i><i></i><i></i></div>
+        <h3>آرزویت را هیچ‌وقت کوچک نکن ✨</h3>
+        <p>امیدوارم زندگی برایت پر از اتفاق‌های قشنگ، آدم‌های امن، خنده‌های واقعی و فرصت‌هایی باشد که به تو اجازه می‌دهند خودِ واقعی‌ات باشی.</p>
+        <button class="text-button" id="againButton" type="button">یک بار دیگر جادو را ببین <span>↻</span></button>
+      </div>
+    </section>
+
+  <footer class="footer">
+    <div class="footer-star">✧</div>
+    <p>برای تمام دخترهایی که جهان را زیباتر می‌کنند.</p>
+    <div class="footer-signature">ساخته‌شده با عشق و خلاقیت <span>·</span> <strong>Sirous</strong></div>
+    <a href="#home" class="back-top" id="backToHome">بازگشت به صفحهٔ اول ↑</a>
+  </footer>
+    <div class="page-navigation final-navigation">
+      <button class="page-prev secondary-button" type="button" data-go="1">→ صفحهٔ قبل</button>
+      <span class="page-counter">صفحهٔ ۳ از ۳</span>
+      <button class="page-next primary-button" type="button" data-go="0">شروع دوباره ↻</button>
+    </div>
+    </section>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
